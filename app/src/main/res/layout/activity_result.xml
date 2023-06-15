@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".play.ui.result.ResultActivity"
+    android:background="#88DF86"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sizning natijalaringiz:"
+                    android:textSize="32sp"
+                    android:textColor="@color/white"
+                    android:textStyle="italic|bold"/>
+                <FrameLayout
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To'g'ri javoblar: "
+                        android:textColor="@color/white"/>
+                    <TextView
+
+                        android:id="@+id/correct_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Xato javoblar: "
+                        android:textColor="@color/white"/>
+                    <TextView
+
+                        android:id="@+id/wrong_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O'tkazib yuborilganlar: "
+                        android:textColor="@color/white"/>
+                    <TextView
+
+                        android:id="@+id/skip_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/btn_home"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/home"/>
+            <!--<LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your results:"
+                    android:textSize="32sp"
+                    android:textColor="#3F51B5"
+                    android:textStyle="italic|bold"/>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correct answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wrong answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skip answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your results:"
+                    android:textSize="32sp"
+                    android:textColor="#3F51B5"
+                    android:textStyle="italic|bold"/>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correct answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wrong answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skip answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your results:"
+                    android:textSize="32sp"
+                    android:textColor="#3F51B5"
+                    android:textStyle="italic|bold"/>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correct answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wrong answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skip answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your results:"
+                    android:textSize="32sp"
+                    android:textColor="#3F51B5"
+                    android:textStyle="italic|bold"/>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correct answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wrong answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_marginHorizontal="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skip answers: "
+                        android:textColor="#3F51B5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24sp"
+                        android:textColor="#3F51B5"
+                        android:layout_gravity="right"/>
+
+                </FrameLayout>
+            </LinearLayout>-->
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
